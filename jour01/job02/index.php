@@ -1,5 +1,6 @@
 <?php
+$compteur = 2;
 $str = "Hello LaPlateforme!";
-for( $i = 0; $i < 2; $i++){
+for( $i = 0; $i < $compteur; $i++){
     echo $str;
 }

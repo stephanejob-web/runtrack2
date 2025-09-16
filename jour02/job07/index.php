@@ -17,6 +17,7 @@
             type="number"
             placeholder="Large input"/>
     <?php
+    $get = isset($_GET['height']) ? $_GET['height'] : 12;
    function triangle($hauteur) {
     echo "<pre>";
     for ($i = 1; $i <= $hauteur; $i++) {
@@ -26,7 +27,7 @@
     }
     echo "</pre>";
     }
-    triangle(15);
+    triangle($get);
     ?>
 
     </div>
@@ -34,10 +35,9 @@
 </html>
 
 <script>
-    let num = 12
     let change = document.querySelector("input");
     change.addEventListener("change", function() {
         let valeur = change.value;
-
+        console.log(valeur);
     })
 </script>

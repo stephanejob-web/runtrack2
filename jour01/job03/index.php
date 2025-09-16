@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+<div style="display: flex ;justify-content: center ;align-items: center ;flex-direction: column" class="container">
 <?php
 // Booléen
 $estConnecte = true;
@@ -19,34 +20,17 @@ $age = 32;
 $prenom = "Laurent";
 // Nombre à virgule flottante
 $temperature = 21.5;
-
 // Affichage avec <br> pour aller à la ligne dans le navigateur
-echo "Connecté : " .($estConnecte ? "Vrai" : "Faux") . "<br>";
+echo "<h1 class='has-text-primary is-size-1'> <h1 class='has-text-primary is-size-1' > Connecté : " .($estConnecte ? "Vrai " : "Faux</h1>") . "</h1>";
 echo "<h1 class='has-text-primary is-size-1'>Âge : " . $age . "</h1>";
 echo " <h1 class='has-text-primary is-size-1'> Prénom : " . $prenom . " </h1>";
 echo " <h1 class='has-text-primary is-size-1'>Température : " . $temperature . "</h1>";
-$type = [
-        [
-                "type" => "Décimal / Flottant (float, double)",
-                "description" => "nombres à virgule (ex : 3.14, -0.5)"
-        ],
-        [
-                "type" => "Entier (int, integer)",
-                "description" => "nombres entiers (ex : 1, -42, 2025)"
-        ],
-        [
-                "type" => "Boolean",
-                "description" => "Type flottant de faible précision, 4 octets ou 32 bits sur quasiment tous les systèmes."
-        ],
-        [
-                "type" => "Chaines de caratéres",
-                "description" => "Un objet String est utilisé afin de représenter et de manipuler une chaîne de caractères."
-        ]
-];
+include 'datas.php';
 ?>
+</div>
 
 <hr>
-<div>
+<div class="container">
     <table class="table">
         <caption>
            <h1 class="has-background-success is-size-1">Types</h1>

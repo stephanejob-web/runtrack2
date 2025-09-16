@@ -13,7 +13,7 @@
 <div>
     <?php
    function triangle($hauteur) {
-    echo "<pre>"; // garde les espaces et retours à la ligne
+    echo "<pre>";
     for ($i = 1; $i <= $hauteur; $i++) {
         $espaces = str_repeat(" ", $hauteur - $i);
         $diese   = str_repeat("#", 2 * $i - 1);
@@ -21,7 +21,6 @@
     }
     echo "</pre>";
     }
-
     triangle(3);
     ?>
     </div>

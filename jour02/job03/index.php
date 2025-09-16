@@ -26,9 +26,6 @@
             echo "<h1 class='is-size-1 is-underlined'>" . $i . "</h1>";
         }
     }
-
-
-
     ?>
 </div>
 </body>

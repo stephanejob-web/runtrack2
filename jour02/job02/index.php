@@ -12,14 +12,12 @@
 <body>
 <div class="container">
     <?php
-
     for ($i = 1; $i <= 1337; $i++) {
         if ($i == 26 || $i == 37 || $i == 88 || $i == 1111) {
             continue;
         }
         echo "<h1 class='is-size-1 has-text-warning'>" . $i . "</h1>";
     }
-
     ?>
 </div>
 </body>

@@ -33,7 +33,7 @@ include 'datas.php';
 <div class="container">
     <table class="table">
         <caption>
-           <h1 class="has-background-success is-size-1">Types</h1>
+           <h1 class="has-background-success is-size-1">Les Types</h1>
         </caption>
         <thead>
         <tr>
@@ -44,6 +44,7 @@ include 'datas.php';
             <tr>
                 <td><?= $item["type"] ?></td>
                 <td><?= $item["description"] ?></td>
+                <td><?= $item["exemple"] ?></td>
             </tr>
         <?php endforeach; ?>
         </thead>

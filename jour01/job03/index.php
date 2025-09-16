@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    >
     <title>Document</title>
 </head>
 <body>
@@ -17,10 +21,10 @@ $prenom = "Laurent";
 $temperature = 21.5;
 
 // Affichage avec <br> pour aller à la ligne dans le navigateur
-echo "Connecté : " . ($estConnecte ? "true" : "false") . "<br>";
-echo "Âge : " . $age . "<br>";
-echo "Prénom : " . $prenom . "<br>";
-echo "Température : " . $temperature . "<br>";
+echo "Connecté : " .($estConnecte ? "Vrai" : "Faux") . "<br>";
+echo "<h1 class='has-text-primary is-size-1'>Âge : " . $age . "</h1>";
+echo " <h1 class='has-text-primary is-size-1'> Prénom : " . $prenom . " </h1>";
+echo " <h1 class='has-text-primary is-size-1'>Température : " . $temperature . "</h1>";
 $type = [
         [
                 "type" => "Décimal / Flottant (float, double)",
@@ -38,15 +42,14 @@ $type = [
                 "type" => "Chaines de caratéres",
                 "description" => "Un objet String est utilisé afin de représenter et de manipuler une chaîne de caractères."
         ]
-
 ];
 ?>
 
 <hr>
-<div style="display: grid;grid-template-columns: repeat(2,1fr);gap: 50px" class="main">
-    <table border="1">
+<div>
+    <table class="table">
         <caption>
-            Types
+           <h1 class="has-background-success is-size-1">Types</h1>
         </caption>
         <thead>
         <tr>

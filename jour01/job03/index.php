@@ -21,24 +21,47 @@ echo "Connecté : " . ($estConnecte ? "true" : "false") . "<br>";
 echo "Âge : " . $age . "<br>";
 echo "Prénom : " . $prenom . "<br>";
 echo "Température : " . $temperature . "<br>";
+$type = [
+        [
+                "type" => "Décimal / Flottant (float, double)",
+                "description" => "nombres à virgule (ex : 3.14, -0.5)"
+        ],
+        [
+                "type" => "Entier (int, integer)",
+                "description" => "nombres entiers (ex : 1, -42, 2025)"
+        ],
+        [
+                "type" => "Boolean",
+                "description" => "Type flottant de faible précision, 4 octets ou 32 bits sur quasiment tous les systèmes."
+        ],
+        [
+                "type" => "Chaines de caratéres",
+                "description" => "Un objet String est utilisé afin de représenter et de manipuler une chaîne de caractères."
+        ]
+
+];
 ?>
 
 <hr>
-
-<table border="1">
-    <tr>
-        <th>Booléen</th>
-        <th>Entier</th>
-        <th>Chaines de caractères</th>
-        <th>Float</th>
-    </tr>
-    <tr>
-        <td>true/false</td>
-        <td>120</td>
-        <td>"Toulon"</td>
-        <td>"12.10"</td>
-    </tr>
-</table>
+<div style="display: grid;grid-template-columns: repeat(2,1fr);gap: 50px" class="main">
+    <table border="1">
+        <caption>
+            Types
+        </caption>
+        <thead>
+        <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Explication</th>
+        </tr>
+        <?php foreach ($type as $item): ?>
+            <tr>
+                <td><?= $item["type"] ?></td>
+                <td><?= $item["description"] ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </thead>
+    </table>
+</div>
 
 </body>
 </html>

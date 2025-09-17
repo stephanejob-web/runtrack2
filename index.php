@@ -65,6 +65,17 @@
                     stockée dans une variable $hauteur, modifiable facilement.
                 </p>
 
+                    <li><a href="TP_PHP/Boucles/decoder.php">Algo decoder</a></li>
+                <p class="menu-label">
+                    TP 2 – Décoder un message
+
+                    Consigne : Crée un fichier decoder.php. Ton script doit parcourir la chaîne :
+
+                    "Coder tous les jours, un petit pas à la fois"
+
+                    … et afficher un caractère sur deux.
+                </p>
+
             </ul>
         </li>
     </ul>

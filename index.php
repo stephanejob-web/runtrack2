@@ -59,7 +59,7 @@
                     facilement.
                 </p>
 
-                <li><a href="jour02/job07/index.php">job07</a></li>
+                <li><a class="is-active" href="jour02/job07/index.php">job07</a></li>
                 <p class="menu-label">
                     Faire un algorithme qui affiche un triangle de 5 de hauteur. Cette dimension devra être
                     stockée dans une variable $hauteur, modifiable facilement.

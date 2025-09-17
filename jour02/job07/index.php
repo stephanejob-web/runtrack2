@@ -12,6 +12,9 @@
 <body>
 <div class="container">
     <h1 class="container is-size-1 has-text-primary has-text-centered "> JEUX DE TRIANGLE</h1>
+    <button class="button mg-large">
+        <a href="../../index.php"> <=== ACCEUIL</a>
+    </button>
     <form method="get" action="">
         <label>
             <input

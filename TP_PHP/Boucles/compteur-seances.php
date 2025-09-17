@@ -19,3 +19,6 @@ Affiche la phrase avec le compteur.
 Vérification : tu dois avoir exactement 12 lignes, la dernière étant Séance n°12 terminée.
 */
 
+for ($i = 1; $i <= 12; $i++) {
+    echo "Séance n° $i terminée \n";
+}

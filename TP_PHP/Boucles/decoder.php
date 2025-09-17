@@ -20,11 +20,11 @@ Vérification : la sortie doit contenir environ la moitié des caractères.
 
 
 $str = "Coder tous les jours, un petit pas à la fois";
-$tt =  str_replace([' ', ','], '', $str);
-for ($i = 0; $i <= strlen($tt); $i++) {
-    if ($tt[$i] %2 == 0) {
-        print_r($tt[$i]);
-    }
+$newStr =  str_replace([' ', ','], '', $str);
+$count = 0;
+for($i=0; isset($newStr[$i]); $i++){
+    $count++;
 
-}
+};
 
+echo strlen($newStr);

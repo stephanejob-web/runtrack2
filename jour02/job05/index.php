@@ -10,7 +10,11 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container">
+<div style="min-height: 100vh ;display: flex; justify-content: center;align-items: center; flex-direction: column">
+    <h1 class="is-size-1 has-text-primary">COMING SOON</h1>
+    <button class="button">
+        <a href="../../index.php"> ACCEUIL</a>
+    </button>
     <?php
     ?>
 </div>

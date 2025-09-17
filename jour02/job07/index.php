@@ -12,13 +12,21 @@
 <body>
 <div class="container">
     <h1 class="container is-size-1 has-text-primary has-text-centered "> JEUX DE TRIANGLE</h1>
-    <input
-            class="input is-large"
-            type="number"
-            placeholder="Large input"/>
+    <form method="get" action="">
+        <label>
+            <input
+                    class="input is-large"
+                    type="number"
+                    placeholder="Large input"
+                    name="height"
+                    value=" value="<?php echo isset($_GET['height']) ? $_GET['height'] : ''; ?>""
+            />
+        </label>
+        <button class="button is-primary is-large" type="submit">Dessiner</button>
+    </form>
+
     <?php
-    $get = isset($_GET['height']) ? $_GET['height'] : 12;
-   function triangle($hauteur) {
+   function triangle($hauteur=5) {
     echo "<pre>";
     for ($i = 1; $i <= $hauteur; $i++) {
         $espaces = str_repeat(" ", $hauteur - $i);
@@ -27,17 +35,9 @@
     }
     echo "</pre>";
     }
-    triangle($get);
+    $hauteur = isset($_GET['height']) ? $_GET['height'] : 12;
+    triangle($hauteur);
     ?>
-
     </div>
 </body>
 </html>
-
-<script>
-    let change = document.querySelector("input");
-    change.addEventListener("change", function() {
-        let valeur = change.value;
-        console.log(valeur);
-    })
-</script>

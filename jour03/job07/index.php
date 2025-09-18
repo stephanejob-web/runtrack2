@@ -11,14 +11,26 @@
 </head>
 <body>
 <?php
-    $str = "Certaines choses changent, et d'autres ne changeront jamais";
-    $longeurChaine = strlen($str);
-    $resultat = "";
-    for($i = 1; $i < $longeurChaine; $i+=2){
-        if($str[$i+1] < $longeurChaine){
-           $resultat .= $str[$i+1] .$str[$i];
-        }
+function longueurChaine($chaine)
+{
+    $count = 0;
+    for ($i = 0; isset($chaine[$i]); $i++) {
+        $count++;
     }
+    return $count;
+}
+
+echo longueurChaine("toto");
+echo strlen("toto");
+
+$str = "Certaines choses changent, et d'autres ne changeront jamais";
+$longeurChaine = strlen($str);
+$resultat = "";
+for ($i = 1; $i < $longeurChaine; $i += 2) {
+    if ($str[$i + 1] < $longeurChaine) {
+        $resultat .= $str[$i + 1] . $str[$i];
+    }
+}
 echo $resultat;
 
 

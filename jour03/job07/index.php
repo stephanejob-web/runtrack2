@@ -11,14 +11,15 @@
 </head>
 <body>
 <?php
-    $str = "Les choses que l'on possède finissent par nous posséder";
-    $reverse ="";
-for ($i = strlen($str); $i >= 0; $i--) {
-    if (isset($str[$i])) {
-        $reverse .= $str[$i];
+    $str = "Certaines choses changent, et d'autres ne changeront jamais";
+    $longeurChaine = strlen($str);
+    $resultat = "";
+    for($i = 1; $i < $longeurChaine; $i+=2){
+        if($str[$i+1] < $longeurChaine){
+           $resultat .= $str[$i+1] .$str[$i];
+        }
     }
-}
-echo "<h1 class='is-size-1 has-text-success'>" . $reverse . "</h1>";
+echo $resultat;
 
 
 ?>

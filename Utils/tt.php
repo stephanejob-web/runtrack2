@@ -6,12 +6,10 @@ $shoes = [
     ["name" => "Nike Dunk Low", "price" => 119.99],
 ];
 
-print_r( $shoes[0]);
 
-// Parcourir chaque chaussure avec foreach
-// foreach ($shoes as $shoe) {
-//     echo "Nom : " . $shoe["name"] . "<br>";
-//     echo "Prix : " . $shoe["price"] . " €<br><br>";
-// }
-?>
+$nom = "stephane";
+$nom[4];
+for ($compteur = 0 ; $compteur<=5 ; $compteur++) {
 
+    echo $nom[$compteur]." ";
+}

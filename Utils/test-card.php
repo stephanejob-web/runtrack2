@@ -6,21 +6,21 @@ $json = '[
     "description": "Sneakers emblématiques en cuir blanc avec une semelle confortable",
     "price": 20,
     "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ce57e713-c110-492a-b271-f81f3436e1eb/AIR+FORCE+1+%2707.png",
-    "quantity": 0
+    "quantity": 2000
   },
   {
     "name": "Nike Air Max 90",
     "description": "Chaussures rétro avec amorti Air visible, style streetwear",
     "price": 139.99,
     "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/57cc4b7d-065e-4417-b7b2-46db937998ce/AIR+FORCE+1+%2707+LV8.png",
-    "quantity": 20
+    "quantity": 200
   },
   {
     "name": "Nike Dunk Low",
     "description": "Modèle classique en cuir avec un design bas et intemporel",
     "price": 119.99,
     "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/tjkr8ecmktw7qooy9d0h/NIKE+SHOX+TL.png",
-    "quantity": 0
+    "quantity": 300
   },
   {
     "name": "Nike Air Zoom Pegasus 40",

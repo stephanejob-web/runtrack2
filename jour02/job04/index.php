@@ -12,19 +12,19 @@
 <body>
 <div class="container">
     <?php
-        for ($i = 1; $i <= 100; $i++) {
-            if ($i % 3 === 0) {
-                echo "<h1 class='is-size-1 '>$i est un multiple de 3 => FIZZ </h1>";
-            }
-            if ($i % 5 === 0) {
-                echo "<h1 class='is-size-1'>$i est un multiple de 5 => BUZZ </h1>";
-            }
-            if (($i % 5 === 0 and ($i % 3 === 0))) {
-                echo "<h1 class='is-size-1'>$i est un multiple de 5 et de 3 => FIZZBUZZ </h1>";
-            }
+    for ($i = 1; $i <= 100; $i++) {
+        if ($i % 15 === 0) {
+            echo "<h1 class='is-size-1'>$i est un multiple de 3 et 5 => FIZZBUZZ</h1>";
+        } elseif ($i % 3 === 0) {
+            echo "<h1 class='is-size-1'>$i est un multiple de 3 => FIZZ</h1>";
+        } elseif ($i % 5 === 0) {
+            echo "<h1 class='is-size-1'>$i est un multiple de 5 => BUZZ</h1>";
+        } else {
+            echo "<h1 class='is-size-1'>$i</h1>";
         }
-
+    }
     ?>
+
 </div>
 </body>
 </html>

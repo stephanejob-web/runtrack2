@@ -1,31 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Affichage GET</title>
-    <link rel="stylesheet" href="../../http_cdn.jsdelivr.net_npm_bulma@1.0.4_css_bulma.css">
-
+    <title>Nombre pair ou impair</title>
 </head>
 <body>
-<h2>Formulaire (POST)</h2>
-<form method="post">
-    Nom : <input type="text" name="nom"><br><br>
-    Prénom : <input type="text" name="prenom"><br><br>
-    Ville : <input type="text" name="ville"><br><br>
-    <input type="submit" value="Envoyer">
+
+<!-- Formulaire -->
+<form method="GET" action="">
+    <label>Entrez un nombre :
+        <input type="text" name="nombre">
+    </label>
+    <input type="submit" value="Vérifier">
 </form>
-<?php print_r($_POST); ?>
-<?php if (!empty($_POST)) : ?>
-    <table>
-        <tr><th>Argument</th><th>Valeur</th></tr>
-        <?php foreach ($_POST as $arg => $val) : ?>
-            <tr>
-                <td><?= $arg ?></td>
-                <td><?= $val ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-<?php endif; ?>
+
+<?php
+
+if (isset($_GET['nombre']) && $_GET['nombre'] !== '') {
+    $nombre = (int) $_GET['nombre'];
+
+    if ($nombre % 2 === 0) {
+        echo "Nombre pair";
+    } else {
+        echo "Nombre impair";
+    }
+}
+?>
 
 </body>
 </html>

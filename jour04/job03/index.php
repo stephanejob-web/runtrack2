@@ -6,26 +6,23 @@
     <link rel="stylesheet" href="../../http_cdn.jsdelivr.net_npm_bulma@1.0.4_css_bulma.css">
 </head>
 <body>
-<h2>Formulaire (GET)</h2>
-<form method="get">
-    Nom : <input type="text" name="nom"><br><br>
-    Prénom : <input type="text" name="prenom"><br><br>
-    Ville : <input type="text" name="ville"><br><br>
+<h2>Formulaire (POST)</h2>
+<!-- Formulaire -->
+<form method="POST" action="">
+    <label>Nom : <input type="text" name="nom"></label><br><br>
+    <label>Prénom : <input type="text" name="prenom"></label><br><br>
+    <label>Email : <input type="text" name="email"></label><br><br>
     <input type="submit" value="Envoyer">
 </form>
-<?php print_r($_GET); ?>
-<?php if (!empty($_GET)) : ?>
 
-    <table>
-        <tr><th>Argument</th><th>Valeur</th></tr>
-        <?php foreach ($_GET as $arg => $val) : ?>
-            <tr>
-                <td><?= $arg ?></td>
-                <td><?= $val ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-<?php endif; ?>
+<?php
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nbArguments = count($_POST);
+    echo "Le nombre d’arguments POST envoyés est : " . $nbArguments;
+}
+?>
 
 </body>
 </html>

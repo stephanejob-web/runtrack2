@@ -7,19 +7,18 @@
 
 </head>
 <body>
-<h2>Formulaire (GET)</h2>
-<form method="get">
+<h2>Formulaire (POST)</h2>
+<form method="post">
     Nom : <input type="text" name="nom"><br><br>
     Prénom : <input type="text" name="prenom"><br><br>
     Ville : <input type="text" name="ville"><br><br>
     <input type="submit" value="Envoyer">
 </form>
-<?php print_r($_GET); ?>
-<?php if (!empty($_GET)) : ?>
-
+<?php print_r($_POST); ?>
+<?php if (!empty($_POST)) : ?>
     <table>
         <tr><th>Argument</th><th>Valeur</th></tr>
-        <?php foreach ($_GET as $arg => $val) : ?>
+        <?php foreach ($_POST as $arg => $val) : ?>
             <tr>
                 <td><?= $arg ?></td>
                 <td><?= $val ?></td>

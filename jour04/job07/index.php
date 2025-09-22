@@ -2,36 +2,51 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Formulaire de connexion</title>
+    <title>Dessiner une maison</title>
 </head>
 <body>
 
 <!-- Formulaire -->
 <form method="POST" action="">
-    <label>Nom d'utilisateur :
-        <input type="text" name="username">
-    </label><br><br>
-
-    <label>Mot de passe :
-        <input type="password" name="password">
-    </label><br><br>
-
-    <input type="submit" value="Se connecter">
+    <label>Largeur : <input type="text" name="largeur"></label><br><br>
+    <label>Hauteur : <input type="text" name="hauteur"></label><br><br>
+    <input type="submit" value="Construire la maison">
 </form>
 
+<pre>
 <?php
-// Vérifier si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'] ?? '';
-    $password = $_POST['password'] ?? '';
+    $largeur = (int) $_POST['largeur'];
+    $hauteur = (int) $_POST['hauteur'];
 
-    if ($username === "John" && $password === "Rambo") {
-        echo "C’est pas ma guerre";
+    if ($largeur > 1 && $hauteur > 1) {
+        // --- TOIT ---
+        for ($i = 1; $i <= $hauteur; $i++) {
+            // espaces avant le toit
+            echo str_repeat(" ", $hauteur - $i);
+            // toit
+            echo "/";
+            echo str_repeat("_", ($i - 1) * 2);
+            echo "\\";
+            echo "\n";
+        }
+
+        // --- MURS ---
+        for ($j = 0; $j < $hauteur; $j++) {
+            echo "|";
+            echo str_repeat(" ", $largeur);
+            echo "|";
+            echo "\n";
+        }
+
+        // --- BASE ---
+        echo str_repeat("-", $largeur + 2);
     } else {
-        echo "Votre pire cauchemar";
+        echo "Veuillez entrer des valeurs valides (supérieures à 1).";
     }
 }
 ?>
+</pre>
 
 </body>
 </html>

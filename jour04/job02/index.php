@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Affichage GET</title>
     <link rel="stylesheet" href="../../http_cdn.jsdelivr.net_npm_bulma@1.0.4_css_bulma.css">
+
 </head>
 <body>
 <h2>Formulaire (GET)</h2>

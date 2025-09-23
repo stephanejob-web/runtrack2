@@ -38,6 +38,6 @@ function leetSpeak($str) {
 };
 
 
-print(leetSpeak("laetitia"));
+print(leetSpeak("abeglst"));
 
 

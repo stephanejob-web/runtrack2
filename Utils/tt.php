@@ -7,8 +7,6 @@ $shoes = [
 ];
 
 
-$nom = "stephane";
-$nom[4];
 for ($compteur = 0 ; $compteur<=5 ; $compteur++) {
 
     echo $nom[$compteur]." ";

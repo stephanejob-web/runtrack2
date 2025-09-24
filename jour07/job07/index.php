@@ -45,7 +45,7 @@ function cesar($str, $decalage): string
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $style = $_POST['style'] ?? '';
-    $texte = $_POST['text'];
+    $texte = $_POST['text'] ?? ' ';
     if ($style === "gras") {
         echo strToBold($texte);
     } elseif ($style === "cesar") {

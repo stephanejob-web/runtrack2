@@ -21,12 +21,12 @@
     <button type="submit">Valider</button>
 </form>
 <?php
-function strToBold($text)
+function strToBold($text): string
 {
     return "<b>" . htmlspecialchars($text) . "</b>";
 }
 
-function cesar($str, $decalage)
+function cesar($str, $decalage): string
 {
     $alphabet = range('a', 'z');
     $result = '';

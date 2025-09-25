@@ -2,7 +2,7 @@
 class User
 {
     public $firstname;
-    public $lastname; 
+    public $lastname;
     public $age;
 
     function __construct($firstname, $lastname, $age)

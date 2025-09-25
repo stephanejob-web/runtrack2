@@ -13,10 +13,39 @@ if (!isset($_SESSION['user'])) {
 
 /* 1) Définir les produits AVANT d'y accéder */
 $produits = [
-        "Livre" => ["titre" => "Livre", "desc" => "Daniel Kolenda"],
-        "Coca"  => ["titre" => "Coca cola", "desc" => "1.5 L"],
+        "Laptop" => [
+                "titre" => "Ordinateur Portable HP 15",
+                "desc"  => "Intel i5, 8 Go RAM, SSD 512 Go"
+        ],
+        "Souris" => [
+                "titre" => "Souris Logitech M185",
+                "desc"  => "Souris sans fil, USB nano-récepteur"
+        ],
+        "Clavier" => [
+                "titre" => "Clavier mécanique Corsair K55",
+                "desc"  => "Touches rétroéclairées RGB, AZERTY"
+        ],
+        "Ecran" => [
+                "titre" => "Écran Dell 24 pouces",
+                "desc"  => "Full HD, 75 Hz, HDMI + DisplayPort"
+        ],
+        "Casque" => [
+                "titre" => "Casque Gaming HyperX Cloud II",
+                "desc"  => "Son surround 7.1, micro antibruit"
+        ],
+        "Disque" => [
+                "titre" => "Disque SSD Samsung 1 To",
+                "desc"  => "NVMe M.2, vitesse 3500 Mo/s"
+        ],
+        "USB" => [
+                "titre" => "Clé USB SanDisk 64 Go",
+                "desc"  => "USB 3.1, vitesse de transfert rapide"
+        ],
+        "Imprimante" => [
+                "titre" => "Imprimante Canon Pixma",
+                "desc"  => "Jet d’encre couleur, Wi-Fi, recto-verso"
+        ],
 ];
-
 /* 2) Ajouter au panier */
 if (isset($_POST['article']) && isset($produits[$_POST['article']])) {
     $_SESSION['user']['panier'][] = $produits[$_POST['article']];

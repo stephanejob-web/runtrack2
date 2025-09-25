@@ -38,7 +38,6 @@ Concatène et affiche le résultat.
 Vérification : la sortie doit contenir environ la moitié des caractères.
 */
 
-
 $str = "Coder tous les jours, un petit pas à la fois";
 $newStr =  str_replace([' ', ','], '', $str);
 

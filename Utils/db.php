@@ -7,7 +7,7 @@ try {
     die("Erreur de connexion : " . $e->getMessage());
 }
 // Requête
-$resultats = $pdo->query("select * from etudiants");
+$resultats = $pdo->query('select * from etudiants');
 $selectHomme = $pdo->query("SELECT * FROM etudiants WHERE sexe = 'homme'");
 $co = count($selectHomme->fetchAll());
 

@@ -1,5 +1,5 @@
 <?php
-global $salleCapacityMoy;
+global $FetchStudentsByBirthYearRange;
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/query.php';
 $erreur = null;
@@ -8,7 +8,7 @@ $resultats = [];
 
 try {
     $pdo = getPDO();
-    $stmt = $pdo->query($salleCapacityMoy);
+    $stmt = $pdo->query($FetchStudentsByBirthYearRange);
     // Important pour n’avoir que des clés associatives (noms de colonnes)
     $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
